@@ -37,7 +37,7 @@ def upload_audio(request):
                     return HttpResponse(f"Error processing the file: {e}")
 
             # Transcribe the audio
-            json_key_path = "C:\\Users\\Manoj\\Downloads\\eyusecase-04f8e4494dce.json"  # Update this path
+            json_key_path = ""  # Update this path
             try:
                 transcripts = transcribe_audio(converted_file_path, json_key_path)
                 transcript_text = "\n".join(transcripts)
